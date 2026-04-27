@@ -98,6 +98,110 @@ export const ALL_QUESTIONS: Question[] = [
   },
 
   // ═══════════════════════════════════════════════
+  // JUDO EN FRANCE  (hf01–hf10)
+  // ═══════════════════════════════════════════════
+  {
+    id: 'hf01',
+    text: 'En quelle année Mikinosuke Kawaishi est-il arrivé à Paris pour y enseigner le judo ?',
+    options: ['1920', '1929', '1935', '1948'],
+    correctIndex: 2,
+    explanation: 'Kawaishi arrive à Paris en 1935 et y développe une méthode d\'enseignement originale, différente du Kodokan, qui aura une influence décisive sur le judo européen.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'hf02',
+    text: 'Qui fut le premier Français à obtenir la ceinture noire de judo, en 1939 ?',
+    options: ['Paul Bonét-Maury', 'Jean de Herdt', 'Maurice Cottereau', 'Henri Courtine'],
+    correctIndex: 2,
+    explanation: 'Maurice Cottereau devient en 1939 le premier judoka français à décrocher la ceinture noire, marquant une étape fondatrice dans l\'histoire du judo en France.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'hf03',
+    text: 'En quelle année a eu lieu le premier Championnat de France de judo ?',
+    options: ['1936', '1941', '1943', '1946'],
+    correctIndex: 2,
+    explanation: 'Le premier Championnat de France masculin se tient en 1943, devant 3 000 spectateurs. C\'est Jean de Herdt (6e dan) qui le remporte.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'hf04',
+    text: 'Combien la France compte-t-elle environ de licenciés en judo (saison 2023-2024) ?',
+    options: ['150 000', '300 000', '530 000', '900 000'],
+    correctIndex: 2,
+    explanation: 'La FFJDA recense 532 190 licenciés en 2023-2024, soit environ 1 % de la population française. La France est l\'une des premières nations mondiales en nombre de pratiquants.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'hf05',
+    text: 'En quelle année a été créée la Fédération Française de Judo (ancêtre de l\'actuelle FFJDA) ?',
+    options: ['1936', '1943', '1946', '1951'],
+    correctIndex: 2,
+    explanation: 'La Fédération Française de Judo et Jūjutsu est officiellement créée en 1946 (Journal Officiel du 5 décembre), avec Paul Bonét-Maury comme premier président.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'hf06',
+    text: 'Qui fut le premier champion du monde français de judo, sacré en 1975 ?',
+    options: ['Henri Courtine', 'Thierry Rey', 'Angelo Parisi', 'Jean-Luc Rougé'],
+    correctIndex: 3,
+    explanation: 'Jean-Luc Rougé devient en 1975 le premier Français champion du monde de judo. Il deviendra ensuite directeur technique national puis président de la FFJDA.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'hf07',
+    text: 'Quel judoka néerlandais fut le premier Européen à vaincre les Japonais aux Championnats du monde, en 1961 à Paris ?',
+    options: ['Neil Adams', 'Peter Seisenbacher', 'Anton Geesink', 'Dietmar Lorenz'],
+    correctIndex: 2,
+    explanation: 'Anton Geesink (Pays-Bas) remporte le titre open aux Mondiaux de Paris en 1961, brisant pour la première fois la domination japonaise. Un tournant historique pour le judo mondial.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'hf08',
+    text: 'Pour quel apport pédagogique majeur Kawaishi est-il particulièrement reconnu en Europe ?',
+    options: [
+      'La création du kata Nage-no-kata',
+      'L\'introduction des catégories de poids en compétition',
+      'L\'introduction des ceintures de couleur pour identifier les grades',
+      'La création du Golden Score en cas d\'égalité',
+    ],
+    correctIndex: 2,
+    explanation: 'Kawaishi popularise en Europe le système de ceintures colorées (jaune, orange, verte…) pour matérialiser la progression des élèves avant la ceinture noire, une idée qui s\'imposera dans le monde entier.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'hf09',
+    text: 'Qu\'est-ce qui mit fin, en 1956, à la "Guerre des méthodes" qui divisait le judo français depuis le début des années 1950 ?',
+    options: [
+      'La victoire judiciaire officielle de la méthode Kodokan',
+      'Le retour définitif de Kawaishi au Japon',
+      'Un protocole d\'accord fusionnant les deux fédérations à représentation paritaire',
+      'Une décision du ministère des Sports imposant une méthode unique',
+    ],
+    correctIndex: 2,
+    explanation: 'La "Guerre des méthodes" opposait les partisans du judo Kodokan (japonais) à ceux de la méthode Kawaishi. Un protocole signé en avril 1956 fusionne les deux organisations avec une représentation équilibrée.',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.CONFIRME,
+  },
+  {
+    id: 'hf10',
+    text: 'Quel scientifique français, prix Nobel, était secrétaire général du Jūjutsu Club de France fondé en 1936 ?',
+    options: ['Paul Langevin', 'Frédéric Joliot-Curie', 'Henri Becquerel', 'Louis de Broglie'],
+    correctIndex: 1,
+    explanation: 'Frédéric Joliot-Curie, Prix Nobel de Chimie 1935 et gendre de Marie Curie, fut secrétaire général du Jūjutsu Club de France dès sa fondation en 1936 — une figure inattendue dans l\'histoire du judo français !',
+    category: Category.HISTOIRE_FRANCE,
+    level: Level.CONFIRME,
+  },
+
+  // ═══════════════════════════════════════════════
   // CODE MORAL  (cm01–cm10)
   // ═══════════════════════════════════════════════
   {

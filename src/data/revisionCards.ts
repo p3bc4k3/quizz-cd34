@@ -25,6 +25,37 @@ En France, la FFJDA (Fédération Française de Judo, Jiu-jitsu, Kendo et Discip
 Le Comité Départemental de l'Hérault (CD34) structure la pratique dans notre département.`,
   },
   {
+    id: 'rc-histoire-france',
+    title: 'Le judo en France',
+    emoji: '🇫🇷',
+    category: Category.HISTOIRE_FRANCE,
+    content: `Le judo s'implante en France dès le début du XXe siècle, mais c'est surtout à partir des années 1930 qu'il prend son essor.
+
+Dates clés :
+• 1935 — Arrivée à Paris de Mikinosuke Kawaishi, fondateur de la "méthode française"
+• 1936 — Fondation du Jūjutsu Club de France (Frédéric Joliot-Curie en est le secrétaire général)
+• 1939 — Maurice Cottereau, première ceinture noire française
+• 1943 — Premier Championnat de France (vainqueur : Jean de Herdt)
+• 1946 — Création de la Fédération Française de Judo et Jūjutsu
+• 1951 — Premier Championnat d'Europe : la France remporte tous les titres
+• 1956 — Fin de la "Guerre des méthodes" par un protocole d'accord
+
+L'apport de Kawaishi :
+Kawaishi popularise en Europe le système de ceintures de couleur pour matérialiser la progression des élèves — une innovation adoptée dans le monde entier.
+
+Champions emblématiques :
+• 1975 — Jean-Luc Rougé, 1er champion du monde français
+• 1980 — Thierry Rey et Angelo Parisi, champions olympiques (Moscou)
+• 1992 — Cécile Nowak et Catherine Fleury, premières championnes olympiques françaises
+• 1996-2000 — David Douillet, double champion olympique
+• 2012-2024 — Teddy Riner, 10 fois champion du monde et 3 fois champion olympique
+
+Le judo aujourd'hui en France :
+• ~530 000 licenciés FFJDA (environ 1 % de la population)
+• L'une des fédérations sportives les plus importantes de France
+• La France est une nation de référence mondiale en judo`,
+  },
+  {
     id: 'rc-code-moral',
     title: 'Code moral du judo',
     emoji: '🤝',

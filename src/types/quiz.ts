@@ -1,5 +1,6 @@
 export enum Category {
   HISTOIRE             = 'HISTOIRE',
+  HISTOIRE_FRANCE      = 'HISTOIRE_FRANCE',
   CODE_MORAL           = 'CODE_MORAL',
   REGLES_DOJO          = 'REGLES_DOJO',
   GRADES_CEINTURES     = 'GRADES_CEINTURES',
@@ -58,6 +59,7 @@ export interface QuizSession {
 
 export const CATEGORY_LABELS: Record<Category, string> = {
   [Category.HISTOIRE]:             'Histoire du judo',
+  [Category.HISTOIRE_FRANCE]:      'Judo en France',
   [Category.CODE_MORAL]:           'Code moral',
   [Category.REGLES_DOJO]:          'Règles du dojo',
   [Category.GRADES_CEINTURES]:     'Grades et ceintures',
@@ -67,6 +69,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 
 export const CATEGORY_EMOJI: Record<Category, string> = {
   [Category.HISTOIRE]:             '📜',
+  [Category.HISTOIRE_FRANCE]:      '🇫🇷',
   [Category.CODE_MORAL]:           '🤝',
   [Category.REGLES_DOJO]:          '🏯',
   [Category.GRADES_CEINTURES]:     '🥋',
