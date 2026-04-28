@@ -1,4 +1,4 @@
-import { useMemo, useReducer, useEffect } from 'react'
+import { useMemo, useReducer, useEffect, useState } from 'react'
 import { useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { Header } from '../components/Header'
 import { ProgressBar } from '../components/ProgressBar'
@@ -40,9 +40,66 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
 
 // ── Component ─────────────────────────────────────────────
 
+function AbandonModal({ onConfirm, onCancel }: { onConfirm: () => void; onCancel: () => void }) {
+  return (
+    <div
+      style={{
+        position: 'fixed', inset: 0, zIndex: 100,
+        background: 'rgba(0,0,0,0.5)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: '20px',
+      }}
+      onClick={(e) => { if (e.target === e.currentTarget) onCancel() }}
+    >
+      <div className="fade-in" style={{
+        background: '#fff',
+        borderRadius: 'var(--radius)',
+        padding: '28px 24px',
+        width: '100%',
+        maxWidth: 340,
+        boxShadow: 'var(--shadow-lg)',
+        textAlign: 'center',
+      }}>
+        <div style={{ fontSize: '2.5rem', marginBottom: 10 }}>🏳️</div>
+        <h2 style={{ margin: '0 0 8px', fontSize: '1.15rem', fontWeight: 900 }}>
+          Abandonner le quiz ?
+        </h2>
+        <p style={{ margin: '0 0 20px', color: 'var(--color-text-muted)', fontSize: '0.88rem', lineHeight: 1.55 }}>
+          Ta progression sera perdue. Tu pourras recommencer depuis l'accueil.
+        </p>
+        <div style={{ display: 'flex', gap: 10 }}>
+          <button
+            onClick={onCancel}
+            style={{
+              flex: 1, padding: '12px', borderRadius: 99,
+              border: '1.5px solid var(--color-border)',
+              background: '#fff', color: 'var(--color-text-muted)',
+              fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer',
+            }}
+          >
+            Continuer
+          </button>
+          <button
+            onClick={onConfirm}
+            style={{
+              flex: 1, padding: '12px', borderRadius: 99,
+              border: 'none',
+              background: 'var(--color-error)', color: '#fff',
+              fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer',
+            }}
+          >
+            Abandonner
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function QuizPage() {
   const location = useLocation()
   const navigate = useNavigate()
+  const [showAbandon, setShowAbandon] = useState(false)
 
   const raw = location.state
   if (!raw || typeof raw !== 'object' || !('config' in raw)) {
@@ -83,6 +140,13 @@ export function QuizPage() {
 
   return (
     <div className="page">
+      {showAbandon && (
+        <AbandonModal
+          onConfirm={() => navigate('/')}
+          onCancel={() => setShowAbandon(false)}
+        />
+      )}
+
       <Header />
       <ProgressBar current={state.currentIndex + 1} total={questions.length} />
 
@@ -109,7 +173,7 @@ export function QuizPage() {
 
       <div style={{ padding: '4px 16px 24px', textAlign: 'center' }}>
         <button
-          onClick={() => navigate('/')}
+          onClick={() => setShowAbandon(true)}
           style={{
             background: 'none',
             border: 'none',
@@ -118,8 +182,6 @@ export function QuizPage() {
             fontSize: '0.82rem',
             fontWeight: 600,
             padding: '8px 16px',
-            textDecoration: 'underline',
-            textDecorationColor: 'transparent',
           }}
           onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-error)' }}
           onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-text-muted)' }}
