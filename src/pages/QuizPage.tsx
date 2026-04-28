@@ -106,6 +106,27 @@ export function QuizPage() {
         questionNumber={state.currentIndex + 1}
         total={questions.length}
       />
+
+      <div style={{ padding: '4px 16px 24px', textAlign: 'center' }}>
+        <button
+          onClick={() => navigate('/')}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: 'var(--color-text-muted)',
+            fontSize: '0.82rem',
+            fontWeight: 600,
+            padding: '8px 16px',
+            textDecoration: 'underline',
+            textDecorationColor: 'transparent',
+          }}
+          onMouseEnter={e => { (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-error)' }}
+          onMouseLeave={e => { (e.currentTarget as HTMLButtonElement).style.color = 'var(--color-text-muted)' }}
+        >
+          Abandonner le quiz
+        </button>
+      </div>
     </div>
   )
 }
