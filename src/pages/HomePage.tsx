@@ -89,10 +89,41 @@ export function HomePage() {
             ))}
           </div>
 
-          {/* Footer */}
-          <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: 40 }}>
-            Fédération Française de Judo — FFJDA
-          </p>
+          {/* Ko-fi */}
+          <div style={{ textAlign: 'center', marginTop: 36 }}>
+            <a
+              href="https://ko-fi.com/pebcake/goal?g=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 7,
+                padding: '8px 16px',
+                borderRadius: 99,
+                background: '#fff',
+                border: '1.5px solid var(--color-border)',
+                color: 'var(--color-text-muted)',
+                fontSize: '0.78rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                boxShadow: 'var(--shadow)',
+                transition: 'border-color 0.15s, color 0.15s',
+              }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLAnchorElement
+                el.style.borderColor = '#FF5E5B'
+                el.style.color = '#FF5E5B'
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLAnchorElement
+                el.style.borderColor = 'var(--color-border)'
+                el.style.color = 'var(--color-text-muted)'
+              }}
+            >
+              ☕ Soutenir le projet
+            </a>
+          </div>
         </main>
       )}
 
