@@ -159,11 +159,11 @@ export function HomePage() {
       {/* ── HOME ─────────────────────────────────── */}
       {step === 'home' && (
         <main className="fade-in" style={{ padding: '28px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-          <div style={{ marginBottom: 28 }}>
-            <h1 style={{ fontSize: 'clamp(1.8rem, 8vw, 2.4rem)', fontWeight: 900, margin: '0 0 2px', lineHeight: 1.1, color: 'var(--color-text)' }}>
+          <div style={{ marginBottom: 28, textAlign: 'center' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 9vw, 2.6rem)', fontWeight: 900, margin: '0 0 2px', lineHeight: 1.1, color: 'var(--color-text)' }}>
               Quiz Culture
             </h1>
-            <h1 style={{ fontSize: 'clamp(1.8rem, 8vw, 2.4rem)', fontWeight: 900, margin: '0 0 14px', lineHeight: 1.1, color: 'var(--color-primary)' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 9vw, 2.6rem)', fontWeight: 900, margin: '0 0 14px', lineHeight: 1.1, color: 'var(--color-primary)' }}>
               Judo
             </h1>
             <p style={{ color: 'var(--color-text-muted)', fontSize: 'clamp(0.88rem, 3.5vw, 1rem)', lineHeight: 1.65, margin: 0 }}>

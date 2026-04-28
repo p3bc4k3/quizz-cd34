@@ -51,12 +51,19 @@ body {
 }
 
 #root {
+  width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background: var(--color-surface);
+}
+
+@media (max-width: 500px) {
+  #root {
+    max-width: 100%;
+  }
 }
 
 /* ---- Buttons ---- */

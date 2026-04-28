@@ -7,20 +7,28 @@ export const REVISION_CARDS: RevisionCard[] = [
     title: 'Histoire rapide du judo',
     emoji: '📜',
     category: Category.HISTOIRE,
-    content: `Le judo a été créé en 1882 par Jigoro Kano (1860-1938) à Tokyo, à partir du jiu-jitsu traditionnel japonais.
+    content: `Le judo a été créé en 1882 par Jigorō Kanō (1860-1938) à Tokyo, à partir du jiu-jitsu traditionnel japonais — notamment des écoles Tenshin Shin'yō-ryū et Kitō-ryū.
 
-Kano a fondé le Kodokan (temple de la voie) et a sélectionné les meilleures techniques en supprimant les plus dangereuses, pour créer un art martial sûr et éducatif.
+Kanō a fondé le Kōdōkan ("temple de la voie") et a sélectionné les meilleures techniques en supprimant les plus dangereuses, pour créer un art martial sûr et éducatif.
 
-Le mot "judo" signifie "la voie souple" (ju = souple, do = voie/chemin).
+Le mot "judo" signifie "la voie souple" :
+• Ju (柔) = souplesse, adaptabilité
+• Do (道) = voie, chemin de vie
+
+La légende de la branche souple :
+En 1733, Akiyama Yoshitoki observe qu'après une tempête de neige, les branches rigides cassent sous le poids de la neige, tandis que les branches souples plient et se libèrent. Cette image illustre le principe fondamental du judo : céder pour mieux vaincre.
+
+Les deux maximes de Kanō (1920) :
+• Seiryoku zenyo — "utilisation optimale de l'énergie"
+• Jita kyoei — "entraide et prospérité mutuelle"
 
 Grandes dates :
-• 1882 — Fondation du judo par Jigoro Kano
+• 1882 — Fondation du judo par Jigorō Kanō
 • 1951 — Création de la Fédération Internationale de Judo (FIJ)
-• 1964 — Le judo devient sport olympique à Tokyo (hommes)
+• 1956 — Premier Championnat du Monde à Tokyo
+• 1964 — Le judo devient sport olympique à Tokyo ; l'Hollandais Anton Geesink remporte la catégorie "toutes catégories", premier non-Japonais champion olympique de judo
 • 1992 — Le judo féminin entre aux Jeux Olympiques à Barcelone
-• Aujourd'hui — Le judo est pratiqué dans plus de 200 pays
-
-En France, la FFJDA (Fédération Française de Judo, Jiu-jitsu, Kendo et Disciplines Associées) gère plus de 530 000 licenciés, répartis dans des ligues régionales et des comités départementaux.`,
+• Aujourd'hui — ~30 millions de pratiquants dans plus de 200 pays`,
   },
   {
     id: 'rc-histoire-france',
@@ -122,6 +130,8 @@ Les Kyu (ceintures de couleur) :
 • 2e Kyu — Ceinture Bleue
 • 1er Kyu — Ceinture Marron
 
+Pour les jeunes, des ceintures bicolores (mi-blanc/mi-couleur suivante) marquent une étape intermédiaire entre chaque grade. Ce système progressif a été introduit par Mikinosuke Kawaishi en France dès 1935 pour motiver les élèves.
+
 Les Dan (ceintures noires) :
 • 1er au 5e Dan — Ceinture Noire
 • 6e au 8e Dan — Ceinture Rouge et Blanche (damier)
@@ -170,9 +180,15 @@ Le lieu et les personnes :
 
 La pratique :
 • Randori — Combat libre d'entraînement
+• Shiai — Combat en compétition
 • Kata — Formes codifiées de techniques
-• Uchi-komi — Répétition de techniques sans chute
-• Rei — Salut / Politesse`,
+• Uchi-komi — Répétition de la technique sans chute complète
+• Nage-komi — Répétition avec chute complète
+• Rei — Salut / Politesse
+
+Les principes fondateurs :
+• Seiryoku zenyo — Utilisation optimale de l'énergie
+• Jita kyoei — Entraide et prospérité mutuelle`,
   },
   {
     id: 'rc-arbitrage',
