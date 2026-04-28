@@ -4,6 +4,7 @@ export enum Category {
   CODE_MORAL           = 'CODE_MORAL',
   REGLES_DOJO          = 'REGLES_DOJO',
   GRADES_CEINTURES     = 'GRADES_CEINTURES',
+  GRADES_CLUB          = 'GRADES_CLUB',
   VOCABULAIRE_JAPONAIS = 'VOCABULAIRE_JAPONAIS',
   ARBITRAGE_VIE        = 'ARBITRAGE_VIE',
 }
@@ -63,6 +64,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   [Category.CODE_MORAL]:           'Code moral',
   [Category.REGLES_DOJO]:          'Règles du dojo',
   [Category.GRADES_CEINTURES]:     'Grades et ceintures',
+  [Category.GRADES_CLUB]:          'Programme des grades',
   [Category.VOCABULAIRE_JAPONAIS]: 'Vocabulaire japonais',
   [Category.ARBITRAGE_VIE]:        'Arbitrage & vie du club',
 }
@@ -73,6 +75,7 @@ export const CATEGORY_EMOJI: Record<Category, string> = {
   [Category.CODE_MORAL]:           '🤝',
   [Category.REGLES_DOJO]:          '🏯',
   [Category.GRADES_CEINTURES]:     '🥋',
+  [Category.GRADES_CLUB]:          '📋',
   [Category.VOCABULAIRE_JAPONAIS]: '🇯🇵',
   [Category.ARBITRAGE_VIE]:        '🏅',
 }

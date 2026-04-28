@@ -554,6 +554,100 @@ export const ALL_QUESTIONS: Question[] = [
   },
 
   // ═══════════════════════════════════════════════
+  // PROGRAMME DES GRADES  (pg01–pg10)
+  // ═══════════════════════════════════════════════
+  {
+    id: 'pg01',
+    text: 'Quelle est la première immobilisation au sol apprise dès la ceinture blanche-jaune ?',
+    options: ['Yoko Shiho Gatame', 'Kesa Gatame', 'Kata Gatame', 'Tate Shiho Gatame'],
+    correctIndex: 1,
+    explanation: 'Le Kesa Gatame (contrôle en travers) est la toute première immobilisation enseignée, dès la ceinture blanche-jaune. C\'est la clé de voûte du travail au sol débutant.',
+    category: Category.GRADES_CLUB,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'pg02',
+    text: 'Quelle est la première technique de projection nommée au programme de la ceinture blanche-jaune ?',
+    options: ['O Soto Gari', 'O Goshi', 'Tai Otoshi', 'Seoi Nage'],
+    correctIndex: 2,
+    explanation: 'Le Tai Otoshi (renversement du corps par barrage) est la première technique de projection nommée au programme de la ceinture blanche-jaune, avec un coefficient de 1 point.',
+    category: Category.GRADES_CLUB,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'pg03',
+    text: 'À quel âge minimum le programme des grades prévoit-il le passage de la ceinture jaune ?',
+    options: ['7 ans', '8 ans', '9 ans', '10 ans'],
+    correctIndex: 1,
+    explanation: 'La ceinture jaune est accessible à partir de 8 ans, avec au minimum 6 mois de pratique depuis la ceinture précédente et un score d\'au moins 18 points.',
+    category: Category.GRADES_CLUB,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'pg04',
+    text: 'Combien de minutes de Randori (combat libre) sont exigées au passage de la ceinture jaune ?',
+    options: ['30 secondes', '1 minute', '2 minutes', '3 minutes'],
+    correctIndex: 1,
+    explanation: 'Un Randori d\'une minute est requis pour la ceinture jaune. La durée augmente progressivement : 1 min 30 à l\'orange, 2 min à l\'orange-verte, 3 min à la verte, 4 min à la bleue.',
+    category: Category.GRADES_CLUB,
+    level: Level.DEBUTANT,
+  },
+  {
+    id: 'pg05',
+    text: 'À partir de quelle ceinture le judoka doit-il connaître la totalité des 8 valeurs du code moral ?',
+    options: ['Ceinture blanche-jaune', 'Ceinture jaune-orange', 'Ceinture orange', 'Ceinture verte'],
+    correctIndex: 2,
+    explanation: 'La ceinture orange marque l\'étape "Investissement personnel" : connaître le code moral complet est une exigence évaluée à 2 points. À la jaune-orange, seules 4 valeurs sur 8 sont demandées.',
+    category: Category.GRADES_CLUB,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'pg06',
+    text: 'Quelle technique au programme de la ceinture orange est cotée 3 points — le coefficient le plus élevé de ce niveau ?',
+    options: ['Uchi Mata', 'Harai Goshi', 'Tsubame Gaeshi', 'Hiza Guruma'],
+    correctIndex: 2,
+    explanation: 'Le Tsubame Gaeshi ("le retour de l\'hirondelle") est coté 3 points à la ceinture orange. C\'est une contre-attaque au balayage de pied, particulièrement difficile à maîtriser.',
+    category: Category.GRADES_CLUB,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'pg07',
+    text: 'Combien de points minimum faut-il obtenir pour valider la ceinture orange-verte ?',
+    options: ['15 points', '18 points', '22 points', '26 points'],
+    correctIndex: 2,
+    explanation: 'La ceinture orange-verte requiert au minimum 22 points. Le barème varie selon les ceintures : 23 pts (blanche-jaune), 18 pts (jaune), 15 pts (jaune-orange), 19 pts (orange), 22 pts (orange-verte).',
+    category: Category.GRADES_CLUB,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'pg08',
+    text: 'À partir de quelle ceinture le judoka commence-t-il à étudier le Nage No Kata ?',
+    options: ['Ceinture orange-verte', 'Ceinture verte', 'Ceinture bleue', 'Ceinture marron'],
+    correctIndex: 1,
+    explanation: 'La 1ère série du Nage No Kata est au programme de la ceinture verte (ou les défenses sur saisies du Goshin Jitsu), cotée 3 points. La 2ème série s\'ajoute à la bleue, les 3 premières à la marron.',
+    category: Category.GRADES_CLUB,
+    level: Level.INTERMEDIAIRE,
+  },
+  {
+    id: 'pg09',
+    text: 'Quelle est la durée de Randori (debout ET au sol) exigée au passage de la ceinture bleue ?',
+    options: ['2 minutes chacun', '3 minutes chacun', '4 minutes chacun', '5 minutes chacun'],
+    correctIndex: 2,
+    explanation: 'La ceinture bleue exige 4 minutes de Randori Tachi Waza (debout) ET 4 minutes de Randori Ne Waza (sol). C\'est aussi à ce niveau que le judoka apprend le Juji Gatame et le Sankaku Jime.',
+    category: Category.GRADES_CLUB,
+    level: Level.CONFIRME,
+  },
+  {
+    id: 'pg10',
+    text: 'Au passage de la ceinture marron, quelle est la durée de la présentation du système d\'attaque complet (Tachi Waza + Ne Waza) ?',
+    options: ['2 minutes', '3 minutes', '5 minutes', '10 minutes'],
+    correctIndex: 2,
+    explanation: 'La ceinture marron exige une présentation de 5 minutes du système d\'attaque complet (debout et au sol). C\'est la ceinture la plus exigeante du programme : la totalité des points est requise.',
+    category: Category.GRADES_CLUB,
+    level: Level.CONFIRME,
+  },
+
+  // ═══════════════════════════════════════════════
   // VOCABULAIRE JAPONAIS  (vj01–vj10)
   // ═══════════════════════════════════════════════
   {

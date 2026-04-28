@@ -139,6 +139,52 @@ En France, l'âge minimum pour le 1er Dan est 16 ans.
 Les passages de grades Kyu sont organisés par les clubs et comités départementaux.`,
   },
   {
+    id: 'rc-grades-club',
+    title: 'Programme des grades',
+    emoji: '📋',
+    category: Category.GRADES_CLUB,
+    content: `Le programme des grades définit les exigences techniques, comportementales et théoriques à maîtriser pour chaque ceinture.
+
+Progression des âges et points requis :
+• Blanche-Jaune — 7 ans — 23 pts min
+• Jaune — 8 ans — 18 pts min
+• Jaune-Orange — 9 ans — 15 pts min
+• Orange — 10 ans — 19 pts min
+• Orange-Verte — 11 ans — 22 pts min
+• Verte — 12 ans — 23 pts min
+• Bleue — 13 ans — 26 pts min
+• Marron — 14 ans — Totalité des points
+
+Chaque ceinture est accessible après au moins 6 mois de pratique depuis la ceinture précédente.
+
+Progression du Randori (combat libre) :
+• Jaune → 1 minute
+• Jaune-Orange → 1 min (Tachi + Ne Waza)
+• Orange → 1 min 30 (Tachi + Ne Waza)
+• Orange-Verte → 2 minutes (Tachi + Ne Waza)
+• Verte → 3 minutes (Tachi + Ne Waza)
+• Bleue et Marron → 4 minutes (Tachi + Ne Waza)
+
+Progression du code moral :
+• Jaune-Orange → 4 valeurs sur 8
+• Orange → Les 8 valeurs complètes
+
+Progression du Nage No Kata :
+• Verte → 1ère série
+• Bleue → 2ème série
+• Marron → 3 premières séries (ou Goshin Jitsu complet)
+
+Techniques clés par niveau :
+• Blanche-Jaune → Tai Otoshi, O/Ko Uchi Gari, Kesa Gatame
+• Jaune → O Soto Gari, Seoi Otoshi, O Goshi, Sasae Tsuri Komi Ashi
+• Jaune-Orange → Seoi Nage, De Ashi Barai, Uki Goshi, Kata Gatame
+• Orange → Uchi Mata, Harai Goshi, Tsubame Gaeshi
+• Orange-Verte → Hane Goshi, Sode Tsuri Komi Goshi, Ashi Guruma
+• Verte → Tomoe Nage, Ura Nage, Sumi Gaeshi, Sankaku Gatame
+• Bleue → Yoko Tomoe Nage, Tani Otoshi, Juji Gatame, Sankaku Jime
+• Marron → Te Guruma, Morote Gari, tous les étranglements et clés`,
+  },
+  {
     id: 'rc-japonais',
     title: 'Mots japonais essentiels',
     emoji: '🇯🇵',
