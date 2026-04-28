@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Header } from '../components/Header'
+import { KofiButton } from '../components/KofiButton'
 import { REVISION_CARDS } from '../data/revisionCards'
 
 export function RevisionPage() {
@@ -83,10 +84,11 @@ export function RevisionPage() {
           })}
         </div>
 
-        <div style={{ padding: '24px 16px 0', textAlign: 'center' }}>
+        <div style={{ padding: '24px 16px 0' }}>
           <button className="btn btn-primary" onClick={() => navigate('/')}>
             🎯 Passer le quiz !
           </button>
+          <KofiButton />
         </div>
       </main>
     </div>

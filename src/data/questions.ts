@@ -1837,10 +1837,10 @@ export const ALL_QUESTIONS: Question[] = [
   },
   {
     id: 'av03',
-    text: 'Combien de temps dure un combat en judo senior en compétition officielle ?',
-    options: ['3 minutes', '4 minutes', '5 minutes', '6 minutes'],
+    text: 'Qu\'est-ce que le "Golden Score" en judo ?',
+    options: ['Une technique valant double point', 'Une prolongation où le premier point est décisif', 'Un score maximum impossible à dépasser', 'Un bonus accordé pour victoire rapide'],
     correctIndex: 1,
-    explanation: 'La durée officielle est de 4 minutes pour les seniors. Elle est réduite pour les catégories jeunes.',
+    explanation: 'Le Golden Score est une prolongation en mort subite : le premier judoka à marquer (Waza-ari, Ippon ou Shido adverse) remporte immédiatement le combat.',
     category: Category.ARBITRAGE_VIE,
     level: Level.INTERMEDIAIRE,
   },
@@ -1958,7 +1958,7 @@ export function buildSession(config: QuizConfig): Question[] {
     }
     case QuizMode.BY_LEVEL:
       return config.level
-        ? shuffle(getByLevel(config.level))
+        ? shuffle(getByLevel(config.level)).slice(0, 10)
         : getRandomQuestions(10)
   }
 }

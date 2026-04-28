@@ -179,34 +179,82 @@ La pratique :
     title: 'Arbitrage de base',
     emoji: '🏅',
     category: Category.ARBITRAGE_VIE,
-    content: `Structure d'un combat :
-• Durée : 4 min (seniors), 3 min (cadets), 2 min (benjamins), 1 min 30 (minimes)
-• Un arbitre central + 2 juges de coin
-• Victoire par Ippon immédiate, sinon au score à la fin du temps
+    content: `L'arbitre et son rôle :
+• Un arbitre central dirige le combat sur le tatami
+• Il est assisté de juges de coin (officiels de table)
+• Il donne les scores, annonce les pénalités et gère le temps
 
-Comment gagner :
-• Ippon — Projection parfaite (sur le dos, avec amplitude, vitesse, contrôle) OU immobilisation ≥ 20 s OU abandon (Maitta)
-• Waza-ari — Projection presque parfaite OU immobilisation 10-19 s
-• 2 Waza-ari = Ippon
-• À égalité → prolongation en Golden Score (premier point gagne)
+─── SCORES ───
 
-Pénalités :
-• Shido — Avertissement (passivité, sortie volontaire, infractions mineures)
-• 3 Shido = Hansoku-make (disqualification)
-• Hansoku-make direct — Infraction grave (ex : technique dangereuse)
+Ippon — Victoire immédiate
+• Projection sur le dos avec amplitude, vitesse et contrôle total
+• Immobilisation maintenue ≥ 20 secondes (Osaekomi)
+• Abandon de l'adversaire (Maitta — frapper 2 fois le tatami ou se rendre)
+• Hansoku-make adverse
 
-Gestes principaux de l'arbitre :
-• Bras levé, pouce en haut → Ippon
-• Bras demi-levé → Waza-ari
+Waza-ari — Demi-point
+• Projection satisfaisant partiellement les critères de l'Ippon
+• Immobilisation tenue 10 à 19 secondes
+• 2 Waza-ari = Ippon (victoire immédiate)
+
+À égalité en fin de temps → Golden Score
+• Prolongation soudaine : le premier judoka à marquer gagne
+• En cas de Shido adverse, le judoka opposé gagne aussi
+
+─── PÉNALITÉS ───
+
+Shido (avertissement mineur)
+• Passivité, absence d'attaque
+• Sortie délibérée de l'aire de combat
+• Prises irrégulières (saisir par en dessous la ceinture, etc.)
+• Attaques avec la tête en avant
+• Simuler une blessure
+• 3 Shido cumulés = Hansoku-make (l'adversaire gagne)
+
+Hansoku-make (disqualification directe)
+• Infraction grave mettant l'adversaire en danger
+• Kani-basami (ciseaux des jambes)
+• Kawazu-gake (projection en arrière avec jambe enroulée)
+• Toute attaque susceptible de blesser la colonne vertébrale
+• Ude-garami appliqué dans le mauvais sens (coude)
+• Porter l'adversaire au-delà de la verticale et le laisser tomber sur la tête
+
+─── ACTES INTERDITS ───
+
+Debout :
+• Saisir directement la jambe sans action préalable
+• Attaques sur les articulations autres que le coude
+• Étranglements et clés articulaires debout (sans transition au sol)
+
+Au sol :
+• Clé sur articulation autre que le coude
+• Prendre l'adversaire en pont (Kado-make)
+• Résister à une immobilisation en sortant de l'aire
+
+─── SITUATIONS COURANTES ───
+
+• Osaekomi — L'arbitre valide une immobilisation, le chrono démarre
+• Toketa — L'immobilisation est annulée, le chrono s'arrête
+• Matte — Arrêt du combat (judogis à remettre, hors limites, etc.)
+• Soremade — Fin du temps, le score est figé
+
+─── GESTES DE L'ARBITRE ───
+
+• Bras tendu vers le haut → Ippon
+• Bras demi-levé (horizontal) → Waza-ari
 • Index pointé vers le judoka → Shido
 • Bras croisés → Hansoku-make
 • Les deux bras écartés → Matte
+• Bras tendu vers le bas → Osaekomi (chrono immobilisation)
+• Deux mains qui s'écartent → Toketa (immobilisation annulée)
+• Bras horizontal puis vers le vainqueur → désignation
 
-Déroulement type d'un combat :
-1. Les judokas saluent (Rei) face à face
-2. L'arbitre dit "Hajime" → le combat commence
-3. L'arbitre dit "Matte" si nécessaire
-4. L'arbitre dit "Soremade" à la fin → désigne le vainqueur
-5. Les judokas se saluent mutuellement`,
+─── DÉROULEMENT D'UN COMBAT ───
+
+1. Judokas en ligne, salut face à face (Rei)
+2. Arbitre : "Hajime" → le combat commence
+3. "Matte" si nécessaire (remise en tenue, hors limites…)
+4. "Soremade" → fin du combat, désignation du vainqueur
+5. Judokas se saluent mutuellement`,
   },
 ]

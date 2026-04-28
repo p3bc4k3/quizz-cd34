@@ -1,4 +1,5 @@
 import type { QuizSession } from '../types/quiz'
+import { KofiButton } from './KofiButton'
 
 interface Props {
   session: QuizSession
@@ -128,6 +129,8 @@ export function ScoreResult({ session, onReplay, onHome }: Props) {
           🏠 Accueil
         </button>
       </div>
+
+      <KofiButton />
     </div>
   )
 }
