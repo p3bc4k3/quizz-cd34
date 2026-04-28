@@ -2,25 +2,39 @@ export function Header() {
   return (
     <header
       style={{
-        background: 'var(--color-primary)',
-        color: 'var(--color-white)',
-        padding: '12px 16px',
+        background: '#ffffff',
+        borderBottom: '1px solid var(--color-border)',
+        padding: '14px 20px',
         display: 'flex',
         alignItems: 'center',
         gap: '12px',
         position: 'sticky',
         top: 0,
         zIndex: 10,
-        boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+        boxShadow: '0 1px 6px rgba(0,0,0,0.06)',
       }}
     >
-      <span style={{ fontSize: '2rem', lineHeight: 1 }}>🥋</span>
+      <span style={{ fontSize: '1.8rem', lineHeight: 1 }}>🥋</span>
       <div>
-        <div style={{ fontSize: '0.7rem', fontWeight: 600, opacity: 0.8, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-          Culture &amp; Histoire
+        <div style={{
+          fontSize: '1.05rem',
+          fontWeight: 900,
+          color: 'var(--color-text)',
+          letterSpacing: '-0.01em',
+          lineHeight: 1.1,
+        }}>
+          Quiz Culture{' '}
+          <span style={{ color: 'var(--color-primary)' }}>Judo</span>
         </div>
-        <div style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '-0.01em' }}>
-          Quiz Culture Judo
+        <div style={{
+          fontSize: '0.65rem',
+          fontWeight: 600,
+          color: 'var(--color-text-muted)',
+          letterSpacing: '0.06em',
+          textTransform: 'uppercase',
+          marginTop: 1,
+        }}>
+          Histoire · Valeurs · Techniques
         </div>
       </div>
     </header>
