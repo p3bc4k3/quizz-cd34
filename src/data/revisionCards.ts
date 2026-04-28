@@ -20,9 +20,7 @@ Grandes dates :
 • 1992 — Le judo féminin entre aux Jeux Olympiques à Barcelone
 • Aujourd'hui — Le judo est pratiqué dans plus de 200 pays
 
-En France, la FFJDA (Fédération Française de Judo, Jiu-jitsu, Kendo et Disciplines Associées) gère plus de 600 000 licenciés.
-
-Le Comité Départemental de l'Hérault (CD34) structure la pratique dans notre département.`,
+En France, la FFJDA (Fédération Française de Judo, Jiu-jitsu, Kendo et Disciplines Associées) gère plus de 530 000 licenciés, répartis dans des ligues régionales et des comités départementaux.`,
   },
   {
     id: 'rc-histoire-france',

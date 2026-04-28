@@ -47,12 +47,12 @@ export function ScoreResult({ session, onReplay, onHome }: Props) {
   const msg = getMessage(pct)
 
   async function handleShare() {
-    const text = `J'ai obtenu ${score}/${total} (${pct}%) au Quiz Judo CD34 🥋\nTeste tes connaissances sur la culture judo !`
+    const text = `J'ai obtenu ${score}/${total} (${pct}%) au Quiz Culture Judo 🥋\nTeste tes connaissances sur la culture judo !`
     const url = window.location.origin
 
     if (typeof navigator.share === 'function') {
       try {
-        await navigator.share({ title: 'Quiz Judo CD34', text, url })
+        await navigator.share({ title: 'Quiz Culture Judo', text, url })
       } catch (e) {
         if (e instanceof Error && e.name !== 'AbortError') {
           await copyToClipboard(`${text}\n${url}`)

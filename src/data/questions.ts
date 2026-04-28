@@ -1810,19 +1810,19 @@ export const ALL_QUESTIONS: Question[] = [
   },
 
   // ═══════════════════════════════════════════════
-  // ARBITRAGE & VIE ASSOCIATIVE / CD34  (av01–av10)
+  // ARBITRAGE & VIE ASSOCIATIVE  (av01–av10)
   // ═══════════════════════════════════════════════
   {
     id: 'av01',
-    text: 'Quel est le rôle principal du Comité Départemental de Judo de l\'Hérault (CD34) ?',
+    text: 'Quel est le rôle principal d\'un Comité Départemental de Judo ?',
     options: [
       'Former les arbitres professionnels uniquement',
-      'Organiser et développer le judo dans le département de l\'Hérault',
+      'Organiser et développer le judo dans le département',
       'Gérer uniquement les compétitions nationales',
       'Sélectionner les judokas pour les JO',
     ],
     correctIndex: 1,
-    explanation: 'Le CD34 structure, développe et promeut le judo dans tout le département. Il organise les compétitions locales, les formations et soutient les clubs.',
+    explanation: 'Les Comités Départementaux structurent et développent le judo localement. Ils organisent les compétitions, les formations et soutiennent les clubs du département.',
     category: Category.ARBITRAGE_VIE,
     level: Level.DEBUTANT,
   },
@@ -1901,7 +1901,7 @@ export const ALL_QUESTIONS: Question[] = [
   },
   {
     id: 'av09',
-    text: 'Le CD34 organise des compétitions pour quelles catégories d\'âge ?',
+    text: 'En judo, les compétitions officielles sont organisées pour quelles catégories d\'âge ?',
     options: [
       'Uniquement les adultes',
       'Des baby-judokas aux vétérans',
@@ -1909,7 +1909,7 @@ export const ALL_QUESTIONS: Question[] = [
       'Uniquement les catégories olympiques',
     ],
     correctIndex: 1,
-    explanation: 'Le CD34 organise des compétitions pour toutes les catégories : éveil judo, poussins, benjamins, minimes, cadets, juniors, seniors et vétérans.',
+    explanation: 'Le judo est pratiqué à tout âge. Les compétitions existent pour toutes les catégories : éveil judo, poussins, benjamins, minimes, cadets, juniors, seniors et vétérans.',
     category: Category.ARBITRAGE_VIE,
     level: Level.DEBUTANT,
   },

@@ -17,10 +17,10 @@ export function Header() {
       <span style={{ fontSize: '2rem', lineHeight: 1 }}>🥋</span>
       <div>
         <div style={{ fontSize: '0.7rem', fontWeight: 600, opacity: 0.8, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-          Comité Départemental de l'Hérault
+          Culture &amp; Histoire
         </div>
         <div style={{ fontSize: '1rem', fontWeight: 800, letterSpacing: '-0.01em' }}>
-          Quiz Culture Judo — CD34
+          Quiz Culture Judo
         </div>
       </div>
     </header>

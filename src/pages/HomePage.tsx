@@ -48,7 +48,6 @@ export function HomePage() {
             <div style={{ fontSize: '4rem', marginBottom: 12 }}>🥋</div>
             <h1 style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-primary)', margin: '0 0 12px', lineHeight: 1.2 }}>
               Quiz Culture Judo
-              <br /><span style={{ color: 'var(--color-accent)' }}>CD34</span>
             </h1>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>
               Teste tes connaissances sur le judo, ses valeurs, son histoire et la vie du dojo.
@@ -92,7 +91,7 @@ export function HomePage() {
 
           {/* Footer */}
           <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: 40 }}>
-            Comité Départemental de Judo de l'Hérault — CD34
+            Fédération Française de Judo — FFJDA
           </p>
         </main>
       )}
