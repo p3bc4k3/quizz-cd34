@@ -11,15 +11,6 @@ import type { QuizConfig } from '../types/quiz'
 
 type Step = 'home' | 'mode' | 'theme' | 'grade_belt' | 'level'
 
-const TAGS = [
-  { emoji: '🥋', label: 'Judo', bg: '#FFF3E0', color: '#D4831A' },
-  { emoji: '📜', label: 'Histoire', bg: '#F0F4FF', color: '#4F6BC4' },
-  { emoji: '🤝', label: 'Valeurs', bg: '#F0FFF4', color: '#15803D' },
-  { emoji: '🇯🇵', label: 'Japonais', bg: '#FFF0F0', color: '#DC2626' },
-  { emoji: '🏅', label: 'Arbitrage', bg: '#FDF4FF', color: '#9333EA' },
-  { emoji: '📋', label: 'Grades', bg: '#FFFBEB', color: '#D97706' },
-]
-
 function BackBtn({ onClick }: { onClick: () => void }) {
   return (
     <button
@@ -45,6 +36,7 @@ function BackBtn({ onClick }: { onClick: () => void }) {
 
 export function HomePage() {
   const [step, setStep] = useState<Step>('home')
+  const [kofiOpen, setKofiOpen] = useState(false)
   const navigate = useNavigate()
 
   function startQuiz(config: QuizConfig) {
@@ -68,45 +60,40 @@ export function HomePage() {
 
       {/* ── HOME ─────────────────────────────────── */}
       {step === 'home' && (
-        <main className="fade-in" style={{ padding: '28px 20px', flex: 1 }}>
-
-          {/* Tag pills */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 28 }}>
-            {TAGS.map(t => (
-              <span
-                key={t.label}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 5,
-                  padding: '5px 12px',
-                  borderRadius: 99,
-                  background: t.bg,
-                  color: t.color,
-                  fontSize: '0.78rem',
-                  fontWeight: 600,
-                }}
-              >
-                {t.emoji} {t.label}
-              </span>
-            ))}
-          </div>
+        <main className="fade-in" style={{ padding: '28px 20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
 
           {/* Hero */}
-          <div style={{ marginBottom: 32 }}>
-            <h1 style={{ fontSize: '2rem', fontWeight: 900, margin: '0 0 4px', lineHeight: 1.1, color: 'var(--color-text)' }}>
+          <div style={{ marginBottom: 28 }}>
+            <h1 style={{
+              fontSize: 'clamp(1.8rem, 8vw, 2.4rem)',
+              fontWeight: 900,
+              margin: '0 0 2px',
+              lineHeight: 1.1,
+              color: 'var(--color-text)',
+            }}>
               Quiz Culture
             </h1>
-            <h1 style={{ fontSize: '2rem', fontWeight: 900, margin: '0 0 14px', lineHeight: 1.1, color: 'var(--color-primary)' }}>
+            <h1 style={{
+              fontSize: 'clamp(1.8rem, 8vw, 2.4rem)',
+              fontWeight: 900,
+              margin: '0 0 14px',
+              lineHeight: 1.1,
+              color: 'var(--color-primary)',
+            }}>
               Judo
             </h1>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: 1.65, margin: 0 }}>
+            <p style={{
+              color: 'var(--color-text-muted)',
+              fontSize: 'clamp(0.88rem, 3.5vw, 1rem)',
+              lineHeight: 1.65,
+              margin: 0,
+            }}>
               Teste tes connaissances sur l'histoire du judo, ses valeurs, ses techniques et son arbitrage.
             </p>
           </div>
 
           {/* CTA buttons */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 32 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
             <button className="btn btn-primary" onClick={() => setStep('mode')}>
               🎯 Commencer le quiz
             </button>
@@ -118,63 +105,66 @@ export function HomePage() {
           {/* Stats */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
+            gridTemplateColumns: 'repeat(3, 1fr)',
             gap: 10,
             textAlign: 'center',
-            marginBottom: 36,
+            marginBottom: 28,
           }}>
             {[
               { num: '190+', label: 'Questions' },
-              { num: '8', label: 'Ceintures' },
-              { num: '3', label: 'Niveaux' },
+              { num: '8',    label: 'Ceintures' },
+              { num: '3',    label: 'Niveaux' },
             ].map(s => (
               <div key={s.label} style={{
                 background: 'white',
                 borderRadius: 'var(--radius-sm)',
-                padding: '14px 8px',
+                padding: '14px 6px',
                 boxShadow: 'var(--shadow)',
                 border: '1px solid var(--color-border)',
               }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-primary)' }}>{s.num}</div>
-                <div style={{ fontSize: '0.7rem', color: 'var(--color-text-muted)', fontWeight: 600, marginTop: 2 }}>{s.label}</div>
+                <div style={{ fontSize: 'clamp(1.2rem, 5vw, 1.5rem)', fontWeight: 900, color: 'var(--color-primary)' }}>{s.num}</div>
+                <div style={{ fontSize: 'clamp(0.65rem, 2.5vw, 0.72rem)', color: 'var(--color-text-muted)', fontWeight: 600, marginTop: 2 }}>{s.label}</div>
               </div>
             ))}
           </div>
 
           {/* Ko-fi */}
-          <div style={{ textAlign: 'center' }}>
-            <a
-              href="https://ko-fi.com/pebcake/goal?g=0"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div style={{ marginTop: 'auto' }}>
+            <button
+              onClick={() => setKofiOpen(v => !v)}
               style={{
-                display: 'inline-flex',
+                display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: 7,
-                padding: '8px 18px',
+                width: '100%',
+                padding: '10px 18px',
                 borderRadius: 99,
                 background: '#fff',
                 border: '1.5px solid var(--color-border)',
-                color: 'var(--color-text-muted)',
-                fontSize: '0.78rem',
+                color: kofiOpen ? '#FF5E5B' : 'var(--color-text-muted)',
+                borderColor: kofiOpen ? '#FF5E5B' : 'var(--color-border)',
+                fontSize: '0.82rem',
                 fontWeight: 600,
-                textDecoration: 'none',
-                boxShadow: 'var(--shadow)',
+                cursor: 'pointer',
                 transition: 'border-color 0.15s, color 0.15s',
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLAnchorElement
-                el.style.borderColor = '#FF5E5B'
-                el.style.color = '#FF5E5B'
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLAnchorElement
-                el.style.borderColor = 'var(--color-border)'
-                el.style.color = 'var(--color-text-muted)'
+                boxShadow: 'var(--shadow)',
               }}
             >
-              ☕ Soutenir le projet
-            </a>
+              ☕ Soutenir le projet {kofiOpen ? '▲' : '▼'}
+            </button>
+
+            {kofiOpen && (
+              <div className="fade-in" style={{ marginTop: 12, borderRadius: 'var(--radius)', overflow: 'hidden', boxShadow: 'var(--shadow)' }}>
+                <iframe
+                  id="kofiframe"
+                  src="https://ko-fi.com/pebcake/?hidefeed=true&widget=true&embed=true&preview=true"
+                  style={{ border: 'none', width: '100%', padding: 4, background: '#f9f9f9', display: 'block' }}
+                  height="712"
+                  title="Soutenir le projet sur Ko-fi"
+                />
+              </div>
+            )}
           </div>
         </main>
       )}
@@ -183,9 +173,7 @@ export function HomePage() {
       {step === 'mode' && (
         <main className="fade-in" style={{ padding: '28px 20px', flex: 1 }}>
           <BackBtn onClick={() => setStep('home')} />
-          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900, color: 'var(--color-text)' }}>
-            Mode de jeu
-          </h2>
+          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900 }}>Mode de jeu</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', margin: '0 0 24px' }}>
             Comment veux-tu t'entraîner ?
           </p>
@@ -211,6 +199,7 @@ export function HomePage() {
                   textAlign: 'left',
                   boxShadow: 'var(--shadow)',
                   transition: 'border-color 0.15s, box-shadow 0.15s',
+                  width: '100%',
                 }}
                 onMouseEnter={e => {
                   const el = e.currentTarget as HTMLButtonElement
@@ -226,19 +215,21 @@ export function HomePage() {
                 <span style={{
                   width: 44,
                   height: 44,
+                  minWidth: 44,
                   borderRadius: 12,
                   background: 'var(--color-primary-light)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '1.4rem',
-                  flexShrink: 0,
-                }}>{m.emoji}</span>
-                <div>
+                }}>
+                  {m.emoji}
+                </span>
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--color-text)' }}>{m.title}</div>
                   <div style={{ fontSize: '0.82rem', color: 'var(--color-text-muted)', marginTop: 2 }}>{m.sub}</div>
                 </div>
-                <span style={{ marginLeft: 'auto', color: 'var(--color-primary)', fontWeight: 700, fontSize: '1.1rem' }}>›</span>
+                <span style={{ color: 'var(--color-primary)', fontWeight: 700, fontSize: '1.1rem', flexShrink: 0 }}>›</span>
               </button>
             ))}
           </div>
@@ -249,9 +240,7 @@ export function HomePage() {
       {step === 'theme' && (
         <main className="fade-in" style={{ padding: '28px 20px', flex: 1 }}>
           <BackBtn onClick={() => setStep('mode')} />
-          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900, color: 'var(--color-text)' }}>
-            Choisir un thème
-          </h2>
+          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900 }}>Choisir un thème</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', margin: '0 0 24px' }}>
             Sélectionne la catégorie qui t'intéresse.
           </p>
@@ -264,10 +253,10 @@ export function HomePage() {
                 style={{ justifyContent: 'flex-start', gap: 12 }}
                 onClick={() => handleThemeSelect(cat)}
               >
-                <span style={{ fontSize: '1.3rem' }}>{CATEGORY_EMOJI[cat]}</span>
-                {CATEGORY_LABELS[cat]}
+                <span style={{ fontSize: '1.3rem', flexShrink: 0 }}>{CATEGORY_EMOJI[cat]}</span>
+                <span style={{ flex: 1, textAlign: 'left' }}>{CATEGORY_LABELS[cat]}</span>
                 {cat === Category.GRADES_CLUB && (
-                  <span style={{ marginLeft: 'auto', fontWeight: 700 }}>›</span>
+                  <span style={{ fontWeight: 700, flexShrink: 0 }}>›</span>
                 )}
               </button>
             ))}
@@ -279,9 +268,7 @@ export function HomePage() {
       {step === 'grade_belt' && (
         <main className="fade-in" style={{ padding: '28px 20px', flex: 1 }}>
           <BackBtn onClick={() => setStep('theme')} />
-          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900, color: 'var(--color-text)' }}>
-            Programme des grades
-          </h2>
+          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900 }}>Programme des grades</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', margin: '0 0 24px' }}>
             Choisis ta ceinture — 10 questions tirées au hasard parmi les 15 disponibles.
           </p>
@@ -294,8 +281,8 @@ export function HomePage() {
                 style={{ justifyContent: 'flex-start', gap: 12 }}
                 onClick={() => startQuiz({ mode: QuizMode.BY_THEME, category: cat })}
               >
-                <span style={{ fontSize: '1.3rem' }}>{CATEGORY_EMOJI[cat]}</span>
-                {CATEGORY_LABELS[cat]}
+                <span style={{ fontSize: '1.3rem', flexShrink: 0 }}>{CATEGORY_EMOJI[cat]}</span>
+                <span style={{ flex: 1, textAlign: 'left' }}>{CATEGORY_LABELS[cat]}</span>
               </button>
             ))}
           </div>
@@ -306,9 +293,7 @@ export function HomePage() {
       {step === 'level' && (
         <main className="fade-in" style={{ padding: '28px 20px', flex: 1 }}>
           <BackBtn onClick={() => setStep('mode')} />
-          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900, color: 'var(--color-text)' }}>
-            Choisir un niveau
-          </h2>
+          <h2 style={{ margin: '0 0 4px', fontSize: '1.4rem', fontWeight: 900 }}>Choisir un niveau</h2>
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.88rem', margin: '0 0 24px' }}>
             À quel niveau veux-tu jouer ?
           </p>
@@ -318,11 +303,11 @@ export function HomePage() {
               <button
                 key={level}
                 className="btn btn-secondary"
-                style={{ justifyContent: 'flex-start', gap: 12, fontSize: '1rem' }}
+                style={{ justifyContent: 'flex-start', gap: 12 }}
                 onClick={() => startQuiz({ mode: QuizMode.BY_LEVEL, level })}
               >
-                <span style={{ fontSize: '1.3rem' }}>{LEVEL_EMOJI[level]}</span>
-                {LEVEL_LABELS[level]}
+                <span style={{ fontSize: '1.3rem', flexShrink: 0 }}>{LEVEL_EMOJI[level]}</span>
+                <span style={{ flex: 1, textAlign: 'left' }}>{LEVEL_LABELS[level]}</span>
               </button>
             ))}
           </div>

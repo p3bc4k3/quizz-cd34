@@ -227,7 +227,21 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-bottom: 32px;
+  padding-bottom: env(safe-area-inset-bottom, 32px);
+  padding-bottom: max(32px, env(safe-area-inset-bottom));
+}
+
+/* ---- Mobile safe area ---- */
+header {
+  padding-top: max(14px, env(safe-area-inset-top));
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+}
+
+/* ---- Responsive text ---- */
+@media (max-width: 380px) {
+  .btn { font-size: 0.92rem; padding: 11px 18px; }
+  .btn-option { font-size: 0.9rem; }
 }
 
 /* ---- Animations ---- */
