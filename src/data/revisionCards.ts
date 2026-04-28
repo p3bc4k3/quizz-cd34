@@ -143,46 +143,74 @@ Les passages de grades Kyu sont organisés par les clubs et comités départemen
     title: 'Programme des grades',
     emoji: '📋',
     category: Category.GRADES_CLUB,
-    content: `Le programme des grades définit les exigences techniques, comportementales et théoriques à maîtriser pour chaque ceinture.
+    content: `Traductions des techniques par ceinture :
 
-Progression des âges et points requis :
-• Blanche-Jaune — 7 ans — 23 pts min
-• Jaune — 8 ans — 18 pts min
-• Jaune-Orange — 9 ans — 15 pts min
-• Orange — 10 ans — 19 pts min
-• Orange-Verte — 11 ans — 22 pts min
-• Verte — 12 ans — 23 pts min
-• Bleue — 13 ans — 26 pts min
-• Marron — 14 ans — Totalité des points
+🟡⬜ Blanche-Jaune
+• Tai Otoshi → Renversement du corps par barrage
+• O Uchi Gari → Grand fauchage intérieur
+• Ko Uchi Gari → Petit fauchage intérieur
+• Kesa Gatame → Contrôle en travers
 
-Chaque ceinture est accessible après au moins 6 mois de pratique depuis la ceinture précédente.
+🟡 Jaune
+• O Soto Gari → Grand fauchage extérieur
+• O Soto Otoshi → Grand renversement extérieur
+• Seoi Otoshi → Projection par-dessus l'épaule avec barrage
+• Sasae Tsuri Komi Ashi → Blocage du pied en tirant et en pêchant
+• O Goshi → Grande hanche
 
-Progression du Randori (combat libre) :
-• Jaune → 1 minute
-• Jaune-Orange → 1 min (Tachi + Ne Waza)
-• Orange → 1 min 30 (Tachi + Ne Waza)
-• Orange-Verte → 2 minutes (Tachi + Ne Waza)
-• Verte → 3 minutes (Tachi + Ne Waza)
-• Bleue et Marron → 4 minutes (Tachi + Ne Waza)
+🟠🟡 Jaune-Orange
+• Seoi Nage → Projection par-dessus l'épaule (portée)
+• Ko Soto Gari/Gake → Petit fauchage / accrochage extérieur
+• De Ashi Barai → Balayage du pied avancé
+• Okuri Ashi Barai → Balayage des deux pieds
+• Tsuri Goshi → Hanche tirée
+• Uki Goshi → Hanche flottée
+• Kata Gatame → Contrôle par l'épaule
 
-Progression du code moral :
-• Jaune-Orange → 4 valeurs sur 8
-• Orange → Les 8 valeurs complètes
+🟠 Orange
+• Uchi Mata → Fauchage par l'intérieur de la cuisse
+• Hiza Guruma → Roue autour du genou
+• Harai Goshi → Hanche balayée
+• Tsuri Komi Goshi → Projection de hanche en soulevant
+• Tsubame Gaeshi → Le retour de l'hirondelle
+• Ushiro Gesa Gatame → Contrôle arrière par le travers
 
-Progression du Nage No Kata :
-• Verte → 1ère série
-• Bleue → 2ème série
-• Marron → 3 premières séries (ou Goshin Jitsu complet)
+🟢🟠 Orange-Verte
+• Ashi Guruma → Roue autour de la jambe
+• Ushiro Goshi → Projection de hanche par l'arrière
+• Sode Tsuri Komi Goshi → Hanche pêchée en soulevant le coude
+• Hane Goshi → Hanche sautée
+• Harai Tsuri Komi Ashi → Balayage de la jambe en pêchant
+• Makura Gesa Gatame → Contrôle par le travers en oreiller
 
-Techniques clés par niveau :
-• Blanche-Jaune → Tai Otoshi, O/Ko Uchi Gari, Kesa Gatame
-• Jaune → O Soto Gari, Seoi Otoshi, O Goshi, Sasae Tsuri Komi Ashi
-• Jaune-Orange → Seoi Nage, De Ashi Barai, Uki Goshi, Kata Gatame
-• Orange → Uchi Mata, Harai Goshi, Tsubame Gaeshi
-• Orange-Verte → Hane Goshi, Sode Tsuri Komi Goshi, Ashi Guruma
-• Verte → Tomoe Nage, Ura Nage, Sumi Gaeshi, Sankaku Gatame
-• Bleue → Yoko Tomoe Nage, Tani Otoshi, Juji Gatame, Sankaku Jime
-• Marron → Te Guruma, Morote Gari, tous les étranglements et clés`,
+🟢 Verte
+• Koshi Guruma → Roue autour des hanches
+• Kubi Nage → Projection par le cou
+• Utsuri Goshi → Projection de hanche en contre
+• Tomoe Nage → Projection en cercle
+• Ura Nage → Projection en arrière
+• Sumi Gaeshi → Renversement dans l'angle
+• Soto Maki Komi → Barrage extérieur en s'enroulant
+
+🔵 Bleue
+• Yoko Tomoe Nage → Projection en cercle sur le côté
+• Tani Otoshi → Chute dans la vallée
+• Yoko Guruma → Enroulement latéral
+• Yoko Gake → Accrochage latéral
+• Juji Gatame → Clé en croix
+• Sankaku Jime → Étranglement en triangle
+
+🟤 Marron
+• Morote Gari → Fauchage des deux jambes
+• Kibisu Gaeshi → Retournement du talon
+• Te Guruma → Roue de la main
+• Uki Otoshi → Chute flottante
+• Sumi Otoshi → Renversement dans l'angle
+• Ude Garami → Clé en torsion du bras
+• Ude Gatame → Clé en extension du coude
+• Hadaka Jime → Étranglement à mains nues
+• Okuri Eri Jime → Étranglement en glissant le revers
+• Kata Ha Jime → Étranglement d'une seule aile`,
   },
   {
     id: 'rc-japonais',
