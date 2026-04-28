@@ -125,10 +125,20 @@ function BeltCodeModal({ onSuccess, onClose }: { onSuccess: () => void; onClose:
   )
 }
 
+const GRADES_KEY = 'grades_unlocked'
+
 export function HomePage() {
   const [step, setStep] = useState<Step>('home')
   const [showBeltModal, setShowBeltModal] = useState(false)
   const navigate = useNavigate()
+
+  function isGradesUnlocked() {
+    return localStorage.getItem(GRADES_KEY) === '1'
+  }
+
+  function unlockGrades() {
+    localStorage.setItem(GRADES_KEY, '1')
+  }
 
   function startQuiz(config: QuizConfig) {
     navigate('/quiz', { state: { config } })
@@ -141,8 +151,12 @@ export function HomePage() {
   }
 
   function handleThemeSelect(cat: Category) {
-    if (cat === Category.GRADES_CLUB) setShowBeltModal(true)
-    else startQuiz({ mode: QuizMode.BY_THEME, category: cat })
+    if (cat === Category.GRADES_CLUB) {
+      if (isGradesUnlocked()) setStep('grade_belt')
+      else setShowBeltModal(true)
+    } else {
+      startQuiz({ mode: QuizMode.BY_THEME, category: cat })
+    }
   }
 
   return (
@@ -151,7 +165,7 @@ export function HomePage() {
 
       {showBeltModal && (
         <BeltCodeModal
-          onSuccess={() => { setShowBeltModal(false); setStep('grade_belt') }}
+          onSuccess={() => { unlockGrades(); setShowBeltModal(false); setStep('grade_belt') }}
           onClose={() => setShowBeltModal(false)}
         />
       )}
