@@ -1,7 +1,7 @@
 {
-  "name": "Quiz Judo CD34 — Hérault",
-  "short_name": "Quiz Judo 34",
-  "description": "Quiz officiel du Comité Départemental de Judo de l'Hérault",
+  "name": "Quiz Culture Judo",
+  "short_name": "Quiz Judo",
+  "description": "Quiz sur la culture judo — histoire, valeurs, techniques et arbitrage",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
