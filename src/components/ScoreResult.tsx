@@ -1,4 +1,5 @@
 import type { QuizSession } from '../types/quiz'
+import { QuizMode, CATEGORY_LABELS, LEVEL_LABELS } from '../types/quiz'
 import { KofiButton } from './KofiButton'
 
 interface Props {
@@ -41,14 +42,22 @@ function getMessage(pct: number): ScoreMessage {
   }
 }
 
+function getThemeLabel(session: QuizSession): string {
+  const { mode, category, level } = session.config
+  if (mode === QuizMode.BY_THEME && category) return CATEGORY_LABELS[category]
+  if (mode === QuizMode.BY_LEVEL && level) return `Niveau ${LEVEL_LABELS[level]}`
+  return 'Quiz rapide'
+}
+
 export function ScoreResult({ session, onReplay, onHome }: Props) {
   const score = session.answers.filter(a => a.isCorrect).length
   const total = session.questions.length
   const pct = Math.round((score / total) * 100)
   const msg = getMessage(pct)
+  const theme = getThemeLabel(session)
 
   async function handleShare() {
-    const text = `J'ai obtenu ${score}/${total} (${pct}%) au Quiz Culture Judo 🥋\nTeste tes connaissances sur la culture judo !`
+    const text = `🥋 Quiz Culture Judo — ${theme}\nJ'ai obtenu ${score}/${total} (${pct}%)\nTeste tes connaissances sur la culture judo !`
     const url = window.location.origin
 
     if (typeof navigator.share === 'function') {

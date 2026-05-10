@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Header } from '../components/Header'
 import { KofiButton } from '../components/KofiButton'
+import { VisitorCounter } from '../components/VisitorCounter'
 import {
   Category, Level, QuizMode,
   CATEGORY_LABELS, CATEGORY_EMOJI,
@@ -205,6 +206,7 @@ export function HomePage() {
 
           <div style={{ marginTop: 'auto' }}>
             <KofiButton />
+            <VisitorCounter />
           </div>
         </main>
       )}
