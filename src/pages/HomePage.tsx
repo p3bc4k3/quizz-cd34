@@ -193,7 +193,7 @@ export function HomePage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, textAlign: 'center', marginBottom: 28 }}>
             {[
-              { num: '190+', label: 'Questions' },
+              { num: '260+', label: 'Questions' },
               { num: '8',    label: 'Ceintures' },
               { num: '3',    label: 'Niveaux' },
             ].map(s => (
