@@ -49,15 +49,22 @@ function getThemeLabel(session: QuizSession): string {
   return 'Quiz rapide'
 }
 
+function formatDuration(ms: number): string {
+  const s = Math.floor(ms / 1000)
+  const m = Math.floor(s / 60)
+  return `${String(m).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`
+}
+
 export function ScoreResult({ session, onReplay, onHome }: Props) {
   const score = session.answers.filter(a => a.isCorrect).length
   const total = session.questions.length
   const pct = Math.round((score / total) * 100)
   const msg = getMessage(pct)
   const theme = getThemeLabel(session)
+  const duration = formatDuration(Date.now() - session.startedAt)
 
   async function handleShare() {
-    const text = `🥋 Quiz Culture Judo — ${theme}\nJ'ai obtenu ${score}/${total} (${pct}%)\nTeste tes connaissances sur la culture judo !`
+    const text = `🥋 Quiz Culture Judo — ${theme}\nJ'ai obtenu ${score}/${total} (${pct}%) en ${duration}\nTeste tes connaissances sur la culture judo !`
     const url = window.location.origin
 
     if (typeof navigator.share === 'function') {
@@ -121,8 +128,8 @@ export function ScoreResult({ session, onReplay, onHome }: Props) {
         </div>
         <div style={{ borderLeft: '1px solid var(--color-border)', height: 40, alignSelf: 'center' }} />
         <div>
-          <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-primary)' }}>{total}</div>
-          <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: 600 }}>TOTAL</div>
+          <div style={{ fontSize: '1.1rem', fontWeight: 900, color: 'var(--color-primary)' }}>{duration}</div>
+          <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', fontWeight: 600 }}>TEMPS</div>
         </div>
       </div>
 

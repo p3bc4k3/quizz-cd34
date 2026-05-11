@@ -25,7 +25,7 @@ export function VisitorCounter() {
     letterSpacing: '0.04em',
   }
 
-  if (error) return null
   if (count === null) return <div style={style}>👁 ···</div>
+  if (error) return <div style={style}>👁 ···</div>
   return <div style={style}>👁 {count.toLocaleString('fr-FR')} visites</div>
 }

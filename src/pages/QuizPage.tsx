@@ -1,4 +1,4 @@
-import { useMemo, useReducer, useEffect, useState } from 'react'
+import { useMemo, useReducer, useEffect, useState, useRef } from 'react'
 import { useNavigate, useLocation, Navigate } from 'react-router-dom'
 import { Header } from '../components/Header'
 import { ProgressBar } from '../components/ProgressBar'
@@ -117,6 +117,14 @@ export function QuizPage() {
     answers: [],
   })
 
+  const startedAtRef = useRef(Date.now())
+  const [elapsed, setElapsed] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => setElapsed(Math.floor((Date.now() - startedAtRef.current) / 1000)), 1000)
+    return () => clearInterval(interval)
+  }, [])
+
   useEffect(() => {
     if (state.phase === 'finished') {
       navigate('/result', {
@@ -125,7 +133,7 @@ export function QuizPage() {
             config,
             questions,
             answers: state.answers,
-            startedAt: Date.now(),
+            startedAt: startedAtRef.current,
           },
         },
         replace: true,
@@ -150,16 +158,17 @@ export function QuizPage() {
       <Header />
       <ProgressBar current={state.currentIndex + 1} total={questions.length} />
 
-      {/* Live score */}
+      {/* Live score + chrono */}
       <div style={{
         display: 'flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
         padding: '4px 16px 0',
         fontSize: '0.8rem',
         fontWeight: 700,
         color: 'var(--color-text-muted)',
       }}>
-        ✅ {state.answers.filter(a => a.isCorrect).length} / {state.answers.length}
+        <span>⏱ {String(Math.floor(elapsed / 60)).padStart(2, '0')}:{String(elapsed % 60).padStart(2, '0')}</span>
+        <span>✅ {state.answers.filter(a => a.isCorrect).length} / {state.answers.length}</span>
       </div>
 
       <QuizCard
